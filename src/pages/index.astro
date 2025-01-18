@@ -1,11 +1,247 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const features = [
+  {
+    title: "Smart Compliance Dashboard",
+    description: "Track and manage all your certifications, training records, and regulatory requirements in one intuitive platform",
+    icon: "📊",
+    bgColor: "bg-purple-50"
+  },
+  {
+    title: "Real-time CQC Updates",
+    description: "Stay ahead with instant notifications about Care Quality Commission requirements and regulation changes",
+    icon: "🔔",
+    bgColor: "bg-blue-50"
+  },
+  {
+    title: "Digital Documentation",
+    description: "Securely store and access all your compliance documents, certifications, and training records digitally",
+    icon: "📱",
+    bgColor: "bg-emerald-50"
+  },
+  {
+    title: "Automated Compliance Checks",
+    description: "Our system automatically verifies your compliance status and alerts you before certifications expire",
+    icon: "✓",
+    bgColor: "bg-amber-50"
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Tafara has transformed how we manage compliance. No more paperwork, no more stress about CQC inspections. Everything we need is right there.",
+    author: "Sarah Williams, Care Home Manager, Manchester",
+    bgColor: "bg-purple-900"
+  },
+  {
+    quote: "The automated alerts have saved us countless hours and helped us maintain perfect compliance scores.",
+    author: "James Thompson, NHS Care Coordinator",
+    bgColor: "bg-gray-900"
+  },
+  {
+    quote: "Brilliant platform for keeping track of all our carers' certifications. The support team is incredibly helpful too.",
+    author: "Emma Clarke, Healthcare Agency Director",
+    bgColor: "bg-teal-600"
+  }
+];
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="/logo.svg" alt="Tafara Care Services" class="h-8" />
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#features" class="text-gray-700 hover:text-purple-900">Features</a>
+          <a href="#testimonials" class="text-gray-700 hover:text-purple-900">Testimonials</a>
+          <a href="#contact" class="text-gray-700 hover:text-purple-900">Contact</a>
+          <a href="/login" class="text-purple-900 font-medium hover:text-purple-700">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="relative pt-32 pb-20 bg-gradient-to-b from-purple-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+        <div class="lg:col-span-7">
+          <div class="mt-12">
+            <span class="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-900 text-sm font-medium mb-6">
+              Trusted by 1000+ UK Healthcare Professionals
+            </span>
+            <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl leading-tight">
+              Simplify Your Healthcare Compliance Journey
+            </h1>
+            <p class="mt-6 text-xl text-gray-600 leading-relaxed">
+              Stop wrestling with paperwork and spreadsheets. Our intelligent platform helps UK healthcare professionals manage certifications, training records, and CQC requirements—all in one place.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="#register" class="inline-flex items-center justify-center bg-purple-800 text-white px-8 py-4 rounded-lg font-medium hover:bg-purple-900 transition-colors text-lg">
+                Start Free Trial
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#demo" class="inline-flex items-center justify-center px-8 py-4 rounded-lg font-medium text-purple-900 hover:bg-purple-50 transition-colors text-lg">
+                Watch Demo
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </a>
+            </div>
+            <div class="mt-8 flex items-center gap-4 text-sm text-gray-600">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                CQC Compliant
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                GDPR Secure
+              </div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                NHS Approved
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 relative lg:mt-0 lg:col-span-5">
+          <div class="relative mx-auto w-full rounded-lg shadow-lg overflow-hidden">
+            <img src="/images/dashboard-preview.jpg" alt="Tafara compliance dashboard preview" class="w-full" />
+            <div class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust Bar -->
+  <div class="bg-white border-y border-gray-100">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-medium text-gray-500 mb-4">Trusted by leading healthcare institutions across the UK</p>
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+          <img class="h-8" src="/images/nhs-logo.svg" alt="NHS" />
+        </div>
+        <!-- Add more trusted organizations -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+          Your Complete Compliance Solution
+        </h2>
+        <p class="text-xl text-gray-600">
+          Everything you need to maintain perfect compliance scores and focus on what matters most—providing excellent care.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+        {features.map(feature => (
+          <div class={`p-8 rounded-xl ${feature.bgColor} hover:scale-[1.02] transition-transform duration-300`}>
+            <div class="text-3xl mb-4">{feature.icon}</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              {feature.title}
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              {feature.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 sm:text-4xl mb-4">
+        Trusted by Healthcare Leaders
+      </h2>
+      <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+        Join thousands of healthcare professionals who've transformed their compliance management with Tafara.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8">
+        {testimonials.map(testimonial => (
+          <div class={`p-8 rounded-xl ${testimonial.bgColor} text-white transform hover:-translate-y-1 transition-transform duration-300`}>
+            <svg class="h-8 w-8 text-white/80 mb-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-lg mb-6 leading-relaxed">"{testimonial.quote}"</p>
+            <p class="font-medium text-sm">- {testimonial.author}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-purple-900 rounded-2xl shadow-xl overflow-hidden">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          <div class="p-12 lg:p-16">
+            <h2 class="text-3xl font-bold text-white sm:text-4xl mb-4">
+              Ready to Transform Your Compliance Management?
+            </h2>
+            <p class="text-lg text-purple-100 mb-8 leading-relaxed">
+              Join thousands of UK healthcare professionals who are saving time and staying compliant with Tafara. Start your free 30-day trial today.
+            </p>
+            <div class="space-y-4">
+              <a href="#register" class="inline-block w-full sm:w-auto text-center bg-white text-purple-900 px-8 py-4 rounded-lg font-medium hover:bg-purple-50 transition-colors">
+                Start Free Trial
+              </a>
+              <p class="text-sm text-purple-200">No credit card required • Cancel anytime</p>
+            </div>
+          </div>
+          <div class="relative hidden md:block">
+            <img src="/images/compliance-dashboard.jpg" alt="Tafara compliance dashboard" class="object-cover h-full w-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <img src="/logo-white.svg" alt="Tafara Care Services" class="h-8 mb-4" />
+          <p class="text-gray-400">Empowering UK healthcare professionals with smart compliance management solutions.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-4">Platform</h3>
+          <ul class="space-y-2">
+            <li><a href="#features" class="text-gray-400 hover:text-white">Features</a></li>
+            <li><a href="#pricing" class="text-gray-400 hover:text-white">Pricing</a></li>
+            <li><a href="#security" class="text-gray-400 hover:text-white">Security</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-4">Contact</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li>support@tafaracare.co.uk</li>
+            <li>0800 123 4567</li>
+            <li>London, United Kingdom</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-4">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="/privacy" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+            <li><a href="/terms" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+            <li><a href="/gdpr" class="text-gray-400 hover:text-white">GDPR Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; {new Date().getFullYear()} Tafara Care Services Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </Layout>
