@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="4" fill="#007AC2"/>
+  <path d="M15 20C15 13.3726 20.3726 8 27 8C33.6274 8 39 13.3726 39 20C39 26.6274 33.6274 32 27 32C20.3726 32 15 26.6274 15 20Z" fill="white"/>
+  <text x="45" y="24" font-family="Arial" font-size="16" font-weight="bold" fill="white">NMC</text>
+</svg> 

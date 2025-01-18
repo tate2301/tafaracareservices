@@ -1,1 +1,9 @@
- 
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="40" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="40" fill="#005EB8"/>
+  <path d="M19.5 8H13.5L8 32H14L15.5 25H17.5L19 32H25L19.5 8ZM16 20L17 14L18 20H16Z" fill="white"/>
+  <path d="M38.5 8H32.5L27 32H33L34.5 25H36.5L38 32H44L38.5 8ZM35 20L36 14L37 20H35Z" fill="white"/>
+  <path d="M57.5 8H51.5L46 32H52L53.5 25H55.5L57 32H63L57.5 8ZM54 20L55 14L56 20H54Z" fill="white"/>
+  <rect x="70" y="8" width="22" height="24" fill="white"/>
+  <path d="M75 12V28H87V24H79V20H85V16H79V12H75Z" fill="#005EB8"/>
+</svg> 
